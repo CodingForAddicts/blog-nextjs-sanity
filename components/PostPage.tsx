@@ -20,7 +20,7 @@ export default function PostPage(props: {
 }) {
   const { preview, loading, data, settings } = props
   const { post = {} as any, morePosts = [] } = data || {}
-  const { title = 'Blog.' } = settings || {}
+  const { title = 'antoine.tsx' } = settings || {}
 
   const router = useRouter()
 
@@ -35,7 +35,7 @@ export default function PostPage(props: {
       <Container>
         <BlogHeader title={title} level={2} />
         {router.isFallback || (preview && !post) ? (
-          <PostTitle>Loading…</PostTitle>
+          <PostTitle>chargement...</PostTitle>
         ) : (
           <>
             <article>
@@ -57,7 +57,7 @@ export default function PostPage(props: {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
-                author={post.author}
+                auteur={post.auteur}
               />
               <PostBody content={post.content} />
             </article>

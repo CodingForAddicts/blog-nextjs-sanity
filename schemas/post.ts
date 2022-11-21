@@ -62,8 +62,8 @@ export default defineType({
       type: 'datetime',
     },
     {
-      name: 'author',
-      title: 'Author',
+      name: 'auteur',
+      title: 'Auteur',
       type: 'reference',
       to: [{ type: authorType.name }],
     },
@@ -71,12 +71,12 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      auteur: 'auteur.name',
       media: 'coverImage',
     },
     prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
+      const { auteur } = selection
+      return { ...selection, subtitle: auteur && `by ${auteur}` }
     },
   },
 })
