@@ -1,12 +1,19 @@
 import Link from 'next/link'
+import type { Post, Settings } from 'lib/sanity.queries'
+
+
 
 export default function BlogHeader({
   title,
   level,
+  lilparagraph,
 }: {
+  lilparagraph: string
   title: string
-  level: 1 | 2
+  level: 1 | 2 
 }) {
+  
+  
   switch (level) {
     case 1:
       return (
@@ -15,7 +22,7 @@ export default function BlogHeader({
             {title}
           </h1>
           <h4 className="mt-5 text-center text-lg md:pl-8 md:text-left">
-           Blog de R&D web, informatique et plus de antoine richard-capponi. <br/> Une seule démarche : être à la quête du less is more.
+            {lilparagraph}
           </h4>
         </header>
       )
@@ -28,6 +35,7 @@ export default function BlogHeader({
               {title}
             </Link>
           </h2>
+          
         </header>
       )
 

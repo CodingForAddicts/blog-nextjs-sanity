@@ -10,7 +10,7 @@ const postFields = groq`
   "auteur": auteur->{name, picture},
 `
 
-export const settingsQuery = groq`*[_type == "settings"][0]{title}`
+export const settingsQuery = groq`*[_type == "settings"][0]{title,lilparagraph}`
 
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
@@ -57,4 +57,5 @@ export interface Post {
 
 export interface Settings {
   title?: string
+  lilparagraph?: string
 }

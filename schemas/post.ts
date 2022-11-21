@@ -23,13 +23,13 @@ export default defineType({
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Titre',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
-      title: 'Slug',
+      title: 'ID.',
       type: 'slug',
       options: {
         source: 'title',
@@ -39,18 +39,18 @@ export default defineType({
     },
     {
       name: 'content',
-      title: 'Content',
+      title: 'Contenu.',
       type: 'array',
       of: [{ type: 'block' }],
     },
     {
       name: 'excerpt',
-      title: 'Excerpt',
+      title: 'Extrait.',
       type: 'text',
     },
     {
       name: 'coverImage',
-      title: 'Cover Image',
+      title: 'Image.',
       type: 'image',
       options: {
         hotspot: true,
@@ -58,12 +58,12 @@ export default defineType({
     },
     {
       name: 'date',
-      title: 'Date',
+      title: 'Date.',
       type: 'datetime',
     },
     {
       name: 'auteur',
-      title: 'Auteur',
+      title: 'Auteur.',
       type: 'reference',
       to: [{ type: authorType.name }],
     },
@@ -76,7 +76,7 @@ export default defineType({
     },
     prepare(selection) {
       const { auteur } = selection
-      return { ...selection, subtitle: auteur && `by ${auteur}` }
+      return { ...selection, subtitle: auteur && `par ${auteur}` }
     },
   },
 })

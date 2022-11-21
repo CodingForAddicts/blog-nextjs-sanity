@@ -19,7 +19,7 @@ export default function CoverImage(props: CoverImageProps) {
       })}
     >
       <Image
-        className="h-auto w-full"
+        className="h-auto w-full "
         width={2000}
         height={1000}
         alt={`Cover Image for ${title}`}
@@ -29,7 +29,7 @@ export default function CoverImage(props: CoverImageProps) {
       />
     </div>
   ) : (
-    <div style={{ paddingTop: '50%', backgroundColor: '#ddd' }} />
+    <div style={{ paddingTop: '50%', backgroundColor: '#FFFFFFFF'}} />
   )
 
   return (

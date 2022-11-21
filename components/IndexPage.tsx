@@ -14,7 +14,8 @@ export default function IndexPage(props: {
 }) {
   const { preview, loading, posts, settings } = props
   const [heroPost, ...morePosts] = posts
-  const { title = 'antoine.tsx' } = settings
+  const { title = 'titre' } = settings
+  const { lilparagraph = 'description' } = settings
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function IndexPage(props: {
           <title>{title}</title>
         </Head>
         <Container>
-          <BlogHeader title={title} level={1} />
+          <BlogHeader title={title} lilparagraph={lilparagraph} level={1} />
           {heroPost && (
             <HeroPost
               title={heroPost.title}

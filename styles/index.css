@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 .blogimages{
-	corner-radius: 10px;
+	border-radius: 15px;
+}
+
+html,
+body,
+main{
+	background-color: black;
+	color: white;
 }
