@@ -57,6 +57,11 @@ export default defineType({
       },
     },
     {
+      name: 'file',
+      title: 'Fichier.',
+      type: 'file',
+    },
+    {
       name: 'date',
       title: 'Date.',
       type: 'datetime',

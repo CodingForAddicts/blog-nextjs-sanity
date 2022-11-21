@@ -5,6 +5,7 @@ const postFields = groq`
   title,
   date,
   excerpt,
+  file,
   coverImage,
   "slug": slug.current,
   "auteur": auteur->{name, picture},
@@ -17,12 +18,15 @@ export const indexQuery = groq`
   ${postFields}
 }`
 
+
+
 export const postQuery = groq`
 {
   "post": *[_type == "post" && slug.current == $slug] | order(_updatedAt desc) [0] {
     content,
     ${postFields}
   },
+  
   "morePosts": *[_type == "post" && slug.current != $slug] | order(date desc, _updatedAt desc) [0...2] {
     content,
     ${postFields}
@@ -53,6 +57,7 @@ export interface Post {
   auteur?: auteur
   slug?: string
   content?: any
+  file?: any
 }
 
 export interface Settings {

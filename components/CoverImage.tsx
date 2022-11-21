@@ -19,7 +19,7 @@ export default function CoverImage(props: CoverImageProps) {
       })}
     >
       <Image
-        className="h-auto w-full image"
+        className="h-auto w-full image heropostimage"
         width={2000}
         height={1000}
         alt={`Cover Image for ${title}`}
