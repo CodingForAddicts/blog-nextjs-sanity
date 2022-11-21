@@ -12,3 +12,13 @@ main{
 	background-color: black;
 	color: white;
 }
+
+.image{
+	transform: scale(1) ;
+	transition: all 700ms ease;
+}
+
+.image:hover{
+	transform: scale(1.01) ;
+	transition: all 700ms ease;
+}
