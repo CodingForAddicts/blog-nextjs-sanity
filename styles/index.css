@@ -22,6 +22,7 @@ main{
 .image:hover{
 	transform: scale(1.01) ;
 	transition: all 700ms ease;
+<<<<<<< HEAD
 }
 
 .heropostimage{
@@ -61,4 +62,6 @@ main{
 }
 .morecardh1{
 	
+=======
+>>>>>>> parent of c5fa0c7 (yay)
 }
